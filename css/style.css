@@ -1,0 +1,438 @@
+/* === CSS: style.css atualizado === */
+
+/* ----------------------------- */
+/* --- Geral e Estrutura --- */
+/* ----------------------------- */
+
+body {
+  margin: 0;
+  font-family: 'Outfit', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: linear-gradient(135deg, #181c23 0%, #23272f 60%, #121212 100%);
+  color: #ffffff;
+}
+
+.hero {
+  background: url('../assets/img/capa.png') center/cover no-repeat;
+  height: 100vh;
+  width: 100%;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 3.5rem;
+  letter-spacing: 1px;
+  margin-bottom: 80px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ffffff, #e0e0e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+section {
+  padding: 100px 20px;
+}
+
+section::after {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 2px;
+  margin: 80px auto 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.293), transparent);
+}
+
+
+/* ----------------------------- */
+/* --- Cards Gerais --- */
+/* ----------------------------- */
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  background: linear-gradient(145deg, #3d3d3d, #505050);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  padding: 50px 30px;
+  flex: 1 1 280px;
+  text-align: center;
+  transition: transform 0.4s ease, background 0.4s ease;
+  box-shadow: 0 0 30px rgba(255,255,255,0.15);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  background: linear-gradient(145deg, #505050, #606060);
+}
+
+.big-card {
+  min-height: 240px;
+  font-size: 1.1rem;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #eee;
+}
+
+.card p {
+  margin-top: 14px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #fff;
+}
+
+.icon {
+  width: 60px;
+  margin-bottom: 18px;
+  opacity: 0.95;
+}
+
+/* Para ícones SVG inline */
+.icon path {
+  fill: #ffffff;
+}
+
+/* ----------------------------- */
+/* --- Imagem CLPs --- */
+/* ----------------------------- */
+
+.clps-img {
+  display: block;
+  max-width: 85%;
+  margin: 0 auto;
+  border-radius: 14px;
+  box-shadow: 0 0 30px rgba(255,255,255,0.08);
+}
+
+/* ----------------------------- */
+/* --- Rodapé --- */
+/* ----------------------------- */
+
+footer {
+  text-align: center;
+  padding: 40px;
+  background: #2e2d2d;
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+/* ----------------------------- */
+/* --- Checklist Premissas --- */
+/* ----------------------------- */
+
+.checklist {
+  list-style: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto 80px;
+}
+
+.checklist li {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  background: linear-gradient(145deg, #3d3d3d, #505050);
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.1);
+}
+
+/* ----------------------------- */
+/* --- Cronograma Gantt --- */
+/* ----------------------------- */
+
+.gantt-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.gantt-row {
+  position: relative;
+  height: 40px;
+  padding: 5px 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  text-align: center;
+  padding-top: 10px;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.gantt-row:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(145deg, #505050, #606060);
+}
+
+.gantt-row h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.gantt-row p {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.etapa-inicial {
+  background: linear-gradient(145deg, #5a7be0, #7b97ed); /* tons mais claros */
+}
+
+.etapa-comiss {
+  background: linear-gradient(145deg, #f6a96d, #fbd4a0); /* tons mais claros */
+}
+
+.etapa-final {
+  background: linear-gradient(145deg, #52d6c6, #88f0df); /* tons mais claros */
+}
+
+/* ----------------------------- */
+/* --- Gantt Flag --- */
+/* ----------------------------- */
+
+
+.gantt-flag {
+  position: relative;
+  width: auto;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #38ada9, #78e08f);
+  text-align: center;
+  box-shadow: 0 0 15px rgba(255,255,255,0.15);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.gantt-flag:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(145deg, #50c9a8, #8ff0c0);
+}
+
+.gantt-flag h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.gantt-flag p {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+/* ----------------------------- */
+/* --- Agrupadores de Etapas --- */
+/* ----------------------------- */
+
+.gantt-group {
+  position: relative;
+  width: 100%;
+  padding: 15px 0;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.gantt-label {
+  position: absolute;
+  top: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, #ffffff, #cccccc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gantt-label.right {
+  right: 20px;
+}
+
+.gantt-label.left {
+  left: 20px;
+}
+
+/* Fundo específico (opcional se quiser diferenciar mais) */
+.etapas-iniciais {
+  background: rgba(74, 105, 189, 0.08); /* tom azulado claro */
+}
+
+.etapas-comiss {
+  background: rgba(223, 171, 149, 0.08); /* tom alaranjado claro */
+}
+
+/* ----------------------------- */
+/* --- Etapas Atuais & Próximas --- */
+/* ----------------------------- */
+
+.etapas-container {
+  margin-bottom: 80px;
+}
+
+.etapas-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  background: linear-gradient(90deg, #ffffff, #cccccc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.etapa-card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.08));
+  backdrop-filter: blur(8px);
+  border-radius: 14px;
+  padding: 30px 20px;
+  flex: 1 1 220px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  box-shadow: 0 0 25px rgba(255,255,255,0.05);
+}
+
+.etapa-card:hover {
+  transform: translateY(-8px);
+  background: linear-gradient(145deg, rgba(255,255,255,0.12), rgba(255,255,255,0.18));
+  box-shadow: 0 0 35px rgba(255,255,255,0.15);
+}
+
+.etapa-card h4 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* 👈 contorno escuro */
+}
+
+.etapa-card p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* 👈 contorno escuro */
+}
+
+/* --- Gradientes únicos para cada card --- */
+
+.cards-container .etapa-card:nth-child(1) {
+  background: linear-gradient(145deg, #5a7be0, #7b97ed);
+}
+
+.cards-container .etapa-card:nth-child(2) {
+  background: linear-gradient(145deg, #6ab0f3, #8ac8ff);
+}
+
+.cards-container .etapa-card:nth-child(3) {
+  background: linear-gradient(145deg, #5ad1b8, #7af3d4);
+}
+
+.cards-container .etapa-card:nth-child(4) {
+  background: linear-gradient(145deg, #f6a96d, #fbd4a0);
+}
+
+.cards-container .etapa-card:nth-child(5) {
+  background: linear-gradient(145deg, #52d6c6, #88f0df);
+}
+
+.cards-container .etapa-card:nth-child(6) {
+  background: linear-gradient(145deg, #b277f2, #d0a8ff);
+}
+
+/* --- Ajuste geral container dos cards --- */
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* ----------------------------- */
+/* --- Pendência TAF --- */
+/* ----------------------------- */
+
+.taf-note {
+  max-width: 1500px;
+  margin: 0 auto;
+  background: linear-gradient(145deg, #3d3d3d, #505050);
+  border-left: 6px solid #f6a96d; /* destaque lateral laranja */
+  border-radius: 16px;
+  padding: 40px 30px;
+  text-align: left;
+  box-shadow: 0 0 30px rgba(246, 169, 109, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.taf-note:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 45px rgba(246, 169, 109, 0.5);
+}
+
+.taf-note p {
+  margin-top: 20px;
+  font-size: 1.3rem;
+  color: #fff;
+  line-height: 1.5;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+.taf-note ul {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-left: 20px;
+}
+
+.taf-note li {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+/* ----------------------------- */
+/* --- Aplicação Final --- */
+/* ----------------------------- */
+
+.app-container {
+  text-align: center;
+}
+
+.app-img {
+  max-width: 90%;
+  border-radius: 16px;
+  box-shadow: 0 0 35px rgba(255,255,255,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-img:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 50px rgba(255,255,255,0.2);
+}
+
+.btn-app {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(145deg, #5a7be0, #7b97ed);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-app:hover {
+  background: linear-gradient(145deg, #6a89cc, #8a9ded);
+  transform: translateY(-4px);
+}
