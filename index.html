@@ -7,36 +7,37 @@
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/beerslider/dist/BeerSlider.css" />
 </head>
 <body>
   <section id="capa" class="hero"></section>
   <!-- Informações da Usina -->
   <section id="usina">
-    <h2>Informações da Usina</h2>
+    <h2>Informações da UHE Garibaldi</h2>
     <div class="cards-container" data-aos="fade-up" data-aos-offset="80">
       <div class="card big-card">
         <img src="assets/icons/icon-power.svg" alt="" class="icon">
-        <h3>Capacidade</h3>
+        <h3>Capacidade Instalada</h3>
         <p>191,9 MW</p>
       </div>
       <div class="card big-card">
         <img src="assets/icons/icon-turbine.svg" alt="" class="icon">
-        <h3>Unidades</h3>
+        <h3>Unidades Geradora</h3>
         <p>4</p>
       </div>
       <div class="card big-card">
         <img src="assets/icons/icon-calendar.svg" alt="" class="icon">
-        <h3>Início</h3>
+        <h3>Início de Operação</h3>
         <p>2013</p>
       </div>
       <div class="card big-card">
         <img src="assets/icons/icon-contract.svg" alt="" class="icon">
-        <h3>Concessão</h3>
+        <h3>Final da Concessão</h3>
         <p>2051</p>
       </div>
       <div class="card big-card">
         <img src="assets/icons/icon-location.svg" alt="" class="icon">
-        <h3>Local</h3>
+        <h3>Local da planta</h3>
         <p>Abdon Batista - SC</p>
       </div>
     </div>
@@ -52,23 +53,24 @@
         <p>07/05/2025</p>
       </div>
       <div class="card big-card">
-        <img src="assets/icons/icon-duration.svg" alt="" class="icon">
-        <h3>Execução</h3>
-        <p>20 meses</p>
-      </div>
-      <div class="card big-card">
         <img src="assets/icons/icon-end.svg" alt="" class="icon">
-        <h3>Término</h3>
+        <h3>Término do Contrato</h3>
         <p>07/01/2027</p>
       </div>
       <div class="card big-card">
+        <img src="assets/icons/icon-duration.svg" alt="" class="icon">
+        <h3>Período de Execução</h3>
+        <p>20 meses</p>
+      </div>
+      <div class="card big-card">
         <img src="assets/icons/icon-company.svg" alt="" class="icon">
-        <h3>Empresa</h3>
+        <h3>Empresa Contratada</h3>
         <p>Autvix</p>
+        <h3>Serra - ES</h3>
       </div>
       <div class="card big-card">
         <img src="assets/icons/icon-value.svg" alt="" class="icon">
-        <h3>Valor</h3>
+        <h3>Valor do Contrato</h3>
         <p>R$ 7,9 milhões</p>
       </div>
     </div>
@@ -79,20 +81,20 @@
     <h2>Escopo Resumido</h2>
     <div class="cards-container" data-aos="fade-up" data-aos-offset="80">
       <div class="card big-card">
-        <h3>Migração</h3>
-        <p>CLPs Quantum → M580</p>
+        <h3>Migração do</h3>
+        <p>CLP Quantum → M580</p>
       </div>
       <div class="card big-card">
         <h3>Software</h3>
-        <p>Migração completa</p>
-      </div>
-      <div class="card big-card">
-        <h3>Testes</h3>
-        <p>SCADA / ONS</p>
+        <p>Migração completa da aplicação</p>
       </div>
       <div class="card big-card">
         <h3>Execução</h3>
         <p>Instalação & Comissionamento</p>
+      </div>
+      <div class="card big-card">
+        <h3>Testes</h3>
+        <p>SCADA / ONS</p>
       </div>
       <div class="card big-card">
         <h3>Finalização</h3>
@@ -102,9 +104,17 @@
   </section>
 
     <!-- Comparação CLPs -->
-    <section id="clps">
-        <h2>Comparativo — Quantum x M580</h2>
-        <img src="assets/img/clps.png" alt="CLPs" class="clps-img" data-aos="fade-up" data-aos-offset="80">
+    <section id="comparacao-clp" data-aos="fade-up" data-aos-offset="0">
+      <h2>Substituição dos CLPs</h2>
+      <h3 style="font-size: 1.3rem; margin-left: 330px;">Os projeto consiste em fazer a migração dos CLPs Quantum para os CLPs M580, ambos da Schneider. A imagem abaixo ilustra essa transição.</h3>
+      <div style="display: flex; justify-content: center;">
+      <div class="beer-slider" data-beer-start="0">
+        <img src="assets/img/clp-antes.png" alt="Antes">
+        <div class="beer-reveal">
+        <img src="assets/img/clp-depois.png" alt="Depois">
+        </div>
+      </div>
+      </div>
     </section>
 
     <!-- Cronograma -->
@@ -112,13 +122,13 @@
     <h2>Cronograma</h2>
 
     <!-- Premissas -->
-     <h3 style="text-align: center; font-size: 200%;">Premissas</h3>
+    <h3 style="text-align: center; font-size: 200%;">Premissas</h3>
     <ul class="checklist" data-aos="fade-up">
-        <li>✔️ Alinhamento de parada de máquinas com a usina</li>
-        <li>✔️ Aproveitamento para manutenções</li>
-        <li>✔️ Horas expurgáveis como modernização</li>
-        <li>✔️ Horas completas (1 ano de saldo)</li>
-        <li>✔️ Renovação a cada 10 anos</li>
+        <li>✔️ Alinhamento de datas de parada de máquinas com a usina</li>
+        <li>✔️ Aproveitamento das paradas para realização de manutenções</li>
+        <li>✔️ Horas expurgáveis como modernização (GIM)</li>
+        <li>✔️ Todas as unidades estão com o saldo de horas pra modernização (GIM) completos</li>
+        <li>✔️ Renovação do GIM a cada 10 anos (Início de operação em 2013)</li>
     </ul>
 
     <!-- Gantt Group Etapas Iniciais -->
@@ -189,58 +199,58 @@
 
     <!-- Etapas atuais e próximas -->
     <section id="etapas">
-    <h2>Etapas Atuais e Próximas Etapas</h2>
+    <h2>Etapas Atuais e Próximas Passos</h2>
 
     <!-- Etapas Atuais -->
     <div class="etapas-container" data-aos="fade-up">
         <h3 class="etapas-title">Etapas Atuais</h3>
         <div class="cards-container">
         <div class="card etapa-card">
-            <h4>Levantamento</h4>
-            <p>Visitas e medições em campo</p>
+            <h4>Levantamento de Informações e Visita Técnica</h4>
+            <p style="font-size: 1.2rem;">Atividade já realizada ✔️</p>
         </div>
         <div class="card etapa-card">
             <h4>Engenharia detalhada</h4>
-            <p>Diagramas e listas técnicas</p>
+            <p style="font-size: 1.2rem;">Elaboração da documentação técnica e softwares das aplicações ⏳</p>
         </div>
         <div class="card etapa-card">
-            <h4>Alinhamento</h4>
-            <p>Reuniões com equipe e cliente</p>
+            <h4>Alinhamento Técnico</h4>
+            <p style="font-size: 1.2rem;">Realização de reuniões semanais entre cliente e fornecedor</p>
         </div>
         <div class="card etapa-card">
             <h4>Planejamento</h4>
-            <p>Definição de fornecimentos</p>
+            <p style="font-size: 1.2rem;">Definição das datas de parada de máquina e etapas detalhadas ⏳</p>
         </div>
         </div>
     </div>
 
     <!-- Próximas Etapas -->
     <div class="etapas-container" data-aos="fade-up">
-        <h3 class="etapas-title">Próximas Etapas</h3>
+        <h3 class="etapas-title">Próximas Passos</h3>
         <div class="cards-container">
         <div class="card etapa-card">
             <h4>Fornecimentos</h4>
-            <p>Execução e logística</p>
+            <p style="font-size: 1.2rem;">Execução e logística</p>
         </div>
         <div class="card etapa-card">
             <h4>Fabricação</h4>
-            <p>Painéis e equipamentos</p>
+            <p style="font-size: 1.2rem;">Painéis e equipamentos</p>
         </div>
         <div class="card etapa-card">
             <h4>Montagens</h4>
-            <p>Infraestrutura e interligações</p>
+            <p style="font-size: 1.2rem;">Infraestrutura e interligações</p>
         </div>
         <div class="card etapa-card">
             <h4>Testes</h4>
-            <p>FAT e simulações</p>
+            <p style="font-size: 1.2rem;">TAF e simulações</p>
         </div>
         <div class="card etapa-card">
             <h4>Execução em campo</h4>
-            <p>Instalação e adequações</p>
+            <p style="font-size: 1.2rem;">Instalação e adequações</p>
         </div>
         <div class="card etapa-card">
             <h4>Comissionamento</h4>
-            <p>Partidas e validações finais</p>
+            <p style="font-size: 1.2rem;">Testes e validações finais</p>
         </div>
         </div>
     </div>
@@ -248,21 +258,26 @@
 
     <!-- Pendência TAF -->
     <section id="taf-pendencia" data-aos="fade-up">
-    <h2>Pendência em Discussão</h2>
+    <h2>Definição de Pendência (TAF)</h2>
     <div class="taf-note">
-        <p>
-        Existe uma pendência em análise referente à realização do TAF (Teste de Aceitação em Fábrica) para os painéis de comando e controle.
+        <p style="font-size: 1.5rem;">
+        Durante a análise do cronograma preliminar enviado pela Autvix, notou-se o seguinte ponto de atenção: os eventos de pagamento de recebimento dos materiais em campo estavam sendo contemplados antes da realização dos TAFs. 
         </p>
-        <p>
-        Existem algumas alternativas que podem ser adotadas:
+        <p style="font-size: 1.5rem;">
+        A empresa inicialmente havia pensado em entregar os equipamentos na obra e depois retirá-los, provendo toda a garantia necessária, para fazer a realização do TAF em sua fábrica.
+        </p>
+        <p style="font-size: 1.5rem;">
+        Além dessa opção proposta pela Autvix, nós temos dois outros possíveis cenários, sendo eles:
         </p>
         <ul>
-        <li>Realização do TAF completo nas dependências do fornecedor com presença do cliente.</li>
-        <li>Realização do TAF simplificado, contemplando apenas os testes de funcionalidades principais.</li>
-        <li>Dispensa do TAF, mediante formalização do cliente.</li>
+        <li style="font-size: 1.5rem;">Realização do TAF na fábrica, conforme previsto inicialmente; ou</li>
+        <li style="font-size: 1.5rem;">Realização do TAF na UHE Garibaldi, sendo que a empresa deverá prover todos os meios necessários para que os testes sejam realizados integralmente, atendendo à todos os pontos presentes no PIT.</li>
         </ul>
-        <p>
-        A definição da estratégia deverá ocorrer em comum acordo com a equipe técnica, considerando cronograma, custos e riscos envolvidos.
+        <p style="font-size: 1.5rem;">
+        A empresa estava querendo fazer esse TAF posterior à entrega na obra, pra não ficar com o montante sem faturamento até a data da realização dos serviços.
+        </p>
+        <p style="font-size: 1.5rem;">
+        ⚠️ Precisamos definir as possibilidades aceitáveis para passarmos pra Autvix.
         </p>
     </div>
     </section>
@@ -287,5 +302,11 @@
   <script>
     AOS.init();
   </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/beerslider/dist/BeerSlider.js"></script>
+  <script>
+    new BeerSlider(document.querySelector('.beer-slider'), { start: 0 });
+  </script>
+
 </body>
 </html>
