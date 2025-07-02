@@ -140,7 +140,7 @@ footer {
 .checklist {
   list-style: none;
   padding: 0;
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto 80px;
 }
 
@@ -277,6 +277,10 @@ footer {
 
 .etapas-comiss {
   background: rgba(223, 171, 149, 0.08); /* tom alaranjado claro */
+}
+
+.etapas-final {
+  background: rgba(60, 120, 80, 0.13); /* tom verde escuro */
 }
 
 /* ----------------------------- */
