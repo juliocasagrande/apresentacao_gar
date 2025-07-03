@@ -472,3 +472,37 @@ footer {
 .beer-reveal {
   overflow: hidden;
 }
+
+/* ----------------------------- */
+/* --- Estilo tabelas Cronograma --- */
+/* ----------------------------- */
+.tabela-container {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  overflow-x: auto;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.08));
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.08);
+}
+
+.tabela-cronograma {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabela-cronograma th, .tabela-cronograma td {
+  padding: 12px 18px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.tabela-cronograma th {
+  background: linear-gradient(145deg, rgba(90, 123, 224, 0.4), rgba(123, 151, 237, 0.4));
+  font-weight: 600;
+}
+
+.tabela-cronograma tbody tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
